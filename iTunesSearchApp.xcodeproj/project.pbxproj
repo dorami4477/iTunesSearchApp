@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		489BCFA62C64B49A0091D3F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489BCFA52C64B49A0091D3F7 /* AppDelegate.swift */; };
 		489BCFA82C64B49A0091D3F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489BCFA72C64B49A0091D3F7 /* SceneDelegate.swift */; };
-		489BCFAA2C64B49A0091D3F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489BCFA92C64B49A0091D3F7 /* ViewController.swift */; };
-		489BCFAD2C64B49A0091D3F7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 489BCFAC2C64B49A0091D3F7 /* Base */; };
+		489BCFAA2C64B49A0091D3F7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489BCFA92C64B49A0091D3F7 /* SearchViewController.swift */; };
 		489BCFAF2C64B49C0091D3F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 489BCFAE2C64B49C0091D3F7 /* Assets.xcassets */; };
 		489BCFB22C64B49C0091D3F7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 489BCFB12C64B49C0091D3F7 /* Base */; };
+		489BCFBD2C64BB280091D3F7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489BCFBC2C64BB280091D3F7 /* BaseViewController.swift */; };
+		489BCFC02C64BC640091D3F7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 489BCFBF2C64BC640091D3F7 /* SnapKit */; };
+		489BCFC22C64BD540091D3F7 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489BCFC12C64BD540091D3F7 /* SearchViewModel.swift */; };
+		489BCFC42C64BD6B0091D3F7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489BCFC32C64BD6B0091D3F7 /* NetworkManager.swift */; };
+		489BCFC72C64BEDF0091D3F7 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 489BCFC62C64BEDF0091D3F7 /* RxCocoa */; };
+		489BCFC92C64BEDF0091D3F7 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 489BCFC82C64BEDF0091D3F7 /* RxSwift */; };
+		489BCFCB2C64BFD60091D3F7 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489BCFCA2C64BFD60091D3F7 /* Search.swift */; };
+		489BCFCD2C64C9DF0091D3F7 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489BCFCC2C64C9DF0091D3F7 /* SearchTableViewCell.swift */; };
+		489BCFD42C6508670091D3F7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 489BCFD32C6508670091D3F7 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		489BCFA22C64B49A0091D3F7 /* iTunesSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		489BCFA52C64B49A0091D3F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		489BCFA72C64B49A0091D3F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		489BCFA92C64B49A0091D3F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		489BCFAC2C64B49A0091D3F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		489BCFA92C64B49A0091D3F7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		489BCFAE2C64B49C0091D3F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		489BCFB12C64B49C0091D3F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		489BCFB32C64B49C0091D3F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		489BCFBC2C64BB280091D3F7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		489BCFC12C64BD540091D3F7 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		489BCFC32C64BD6B0091D3F7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		489BCFCA2C64BFD60091D3F7 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		489BCFCC2C64C9DF0091D3F7 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				489BCFD42C6508670091D3F7 /* Kingfisher in Frameworks */,
+				489BCFC92C64BEDF0091D3F7 /* RxSwift in Frameworks */,
+				489BCFC72C64BEDF0091D3F7 /* RxCocoa in Frameworks */,
+				489BCFC02C64BC640091D3F7 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +72,43 @@
 		489BCFA42C64B49A0091D3F7 /* iTunesSearchApp */ = {
 			isa = PBXGroup;
 			children = (
-				489BCFA52C64B49A0091D3F7 /* AppDelegate.swift */,
-				489BCFA72C64B49A0091D3F7 /* SceneDelegate.swift */,
-				489BCFA92C64B49A0091D3F7 /* ViewController.swift */,
-				489BCFAB2C64B49A0091D3F7 /* Main.storyboard */,
+				489BCFBB2C64BB110091D3F7 /* Base */,
+				489BCFBA2C64B69E0091D3F7 /* Search */,
+				489BCFB92C64B6930091D3F7 /* App */,
 				489BCFAE2C64B49C0091D3F7 /* Assets.xcassets */,
 				489BCFB02C64B49C0091D3F7 /* LaunchScreen.storyboard */,
 				489BCFB32C64B49C0091D3F7 /* Info.plist */,
 			);
 			path = iTunesSearchApp;
+			sourceTree = "<group>";
+		};
+		489BCFB92C64B6930091D3F7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				489BCFA52C64B49A0091D3F7 /* AppDelegate.swift */,
+				489BCFA72C64B49A0091D3F7 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		489BCFBA2C64B69E0091D3F7 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				489BCFA92C64B49A0091D3F7 /* SearchViewController.swift */,
+				489BCFC12C64BD540091D3F7 /* SearchViewModel.swift */,
+				489BCFC32C64BD6B0091D3F7 /* NetworkManager.swift */,
+				489BCFCA2C64BFD60091D3F7 /* Search.swift */,
+				489BCFCC2C64C9DF0091D3F7 /* SearchTableViewCell.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		489BCFBB2C64BB110091D3F7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				489BCFBC2C64BB280091D3F7 /* BaseViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +127,12 @@
 			dependencies = (
 			);
 			name = iTunesSearchApp;
+			packageProductDependencies = (
+				489BCFBF2C64BC640091D3F7 /* SnapKit */,
+				489BCFC62C64BEDF0091D3F7 /* RxCocoa */,
+				489BCFC82C64BEDF0091D3F7 /* RxSwift */,
+				489BCFD32C6508670091D3F7 /* Kingfisher */,
+			);
 			productName = iTunesSearchApp;
 			productReference = 489BCFA22C64B49A0091D3F7 /* iTunesSearchApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +161,11 @@
 				Base,
 			);
 			mainGroup = 489BCF992C64B49A0091D3F7;
+			packageReferences = (
+				489BCFBE2C64BC640091D3F7 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				489BCFC52C64BEDF0091D3F7 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				489BCFD22C6508670091D3F7 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 489BCFA32C64B49A0091D3F7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +182,6 @@
 			files = (
 				489BCFAF2C64B49C0091D3F7 /* Assets.xcassets in Resources */,
 				489BCFB22C64B49C0091D3F7 /* Base in Resources */,
-				489BCFAD2C64B49A0091D3F7 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +192,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				489BCFAA2C64B49A0091D3F7 /* ViewController.swift in Sources */,
+				489BCFC42C64BD6B0091D3F7 /* NetworkManager.swift in Sources */,
+				489BCFAA2C64B49A0091D3F7 /* SearchViewController.swift in Sources */,
+				489BCFC22C64BD540091D3F7 /* SearchViewModel.swift in Sources */,
+				489BCFBD2C64BB280091D3F7 /* BaseViewController.swift in Sources */,
 				489BCFA62C64B49A0091D3F7 /* AppDelegate.swift in Sources */,
+				489BCFCD2C64C9DF0091D3F7 /* SearchTableViewCell.swift in Sources */,
 				489BCFA82C64B49A0091D3F7 /* SceneDelegate.swift in Sources */,
+				489BCFCB2C64BFD60091D3F7 /* Search.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		489BCFAB2C64B49A0091D3F7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				489BCFAC2C64B49A0091D3F7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		489BCFB02C64B49C0091D3F7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -218,6 +269,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -275,6 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -297,9 +350,9 @@
 				INFOPLIST_FILE = iTunesSearchApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,9 +360,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dahyun.iTunesSearchApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -325,9 +382,9 @@
 				INFOPLIST_FILE = iTunesSearchApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +392,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dahyun.iTunesSearchApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -363,6 +424,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		489BCFBE2C64BC640091D3F7 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		489BCFC52C64BEDF0091D3F7 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
+		489BCFD22C6508670091D3F7 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		489BCFBF2C64BC640091D3F7 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 489BCFBE2C64BC640091D3F7 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		489BCFC62C64BEDF0091D3F7 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 489BCFC52C64BEDF0091D3F7 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		489BCFC82C64BEDF0091D3F7 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 489BCFC52C64BEDF0091D3F7 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		489BCFD32C6508670091D3F7 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 489BCFD22C6508670091D3F7 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 489BCF9A2C64B49A0091D3F7 /* Project object */;
 }
