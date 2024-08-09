@@ -17,6 +17,7 @@ final class SearchViewModel {
         let searchText:ControlProperty<String>
         let searchButtonTap: ControlEvent<Void>
         let modelSeleted: ControlEvent<SearchResults>
+        let keywordModelSelected: ControlEvent<String>
     }
     
     struct Output {
@@ -57,6 +58,21 @@ final class SearchViewModel {
                 UserDefaultsManager.searchTerms = owner.searchTerms
                 keywords.onNext(owner.searchTerms)
             }
+            .disposed(by: disposeBag)
+        
+        input.keywordModelSelected
+            .flatMap{ value in
+                NetworkManager.shared.callRequest(query: value)
+            }
+            .subscribe(with: self, onNext: { owner, value in
+                searchList.onNext(value.results)
+            }, onError: { owner, error in
+                print(error)
+            }, onCompleted: { owner in
+                print("onCompleted")
+            }, onDisposed: { owner in
+                print("onDisposed")
+            })
             .disposed(by: disposeBag)
         
         return Output(searchList: searchList, modelSeleted: input.modelSeleted, keywords: keywords)

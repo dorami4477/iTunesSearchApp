@@ -28,7 +28,8 @@ class SearchViewController: BaseViewController {
         guard let searchbar = navigationItem.searchController?.searchBar else { return }
         let input = SearchViewModel.Input(searchText: searchbar.rx.text.orEmpty,
                                           searchButtonTap: searchbar.rx.searchButtonClicked, 
-                                          modelSeleted: tableView.rx.modelSelected(SearchResults.self))
+                                          modelSeleted: tableView.rx.modelSelected(SearchResults.self),
+                                          keywordModelSelected: collectionView.rx.modelSelected(String.self))
         let output = viewModel.transform(input: input)
         
         output.searchList
@@ -61,6 +62,7 @@ class SearchViewController: BaseViewController {
         searchController.searchBar.placeholder = "게임, 앱, 스토리 등"
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.autocapitalizationType = .none
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
     }
@@ -89,7 +91,7 @@ class SearchViewController: BaseViewController {
     
     func layout() -> UICollectionViewLayout {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 80, height: 44)
+        layout.itemSize = CGSize(width: 80, height: 34)
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 10
         return layout
