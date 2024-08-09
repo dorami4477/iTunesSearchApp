@@ -52,7 +52,8 @@ final class SearchViewModel {
         
         searchTerm
             .subscribe(with: self) { owner, value in
-                owner.searchTerms.append(value)
+                owner.searchTerms.removeAll { $0 == value }
+                owner.searchTerms.insert(value, at: 0)
                 UserDefaultsManager.searchTerms = owner.searchTerms
                 keywords.onNext(owner.searchTerms)
             }
