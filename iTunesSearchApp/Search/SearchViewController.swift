@@ -17,10 +17,10 @@ class SearchViewController: BaseViewController {
     private let tableView = UITableView()
     let viewModel = SearchViewModel()
     let disposeBag = DisposeBag()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureNavigation()
+        
         bind()
     }
     
@@ -47,6 +47,12 @@ class SearchViewController: BaseViewController {
             }
             .disposed(by: disposeBag)
         
+        output.keywords
+            .bind(to: collectionView.rx.items(cellIdentifier: KeywordsCollectionViewCell.id, cellType: KeywordsCollectionViewCell.self)){ item, element, cell in
+                cell.titleLabel.text = element
+            }
+            .disposed(by: disposeBag)
+        
     }
 
     override func configureNavigation() {
@@ -65,21 +71,27 @@ class SearchViewController: BaseViewController {
     }
     
     override func configureLayout() {
-        tableView.rowHeight = 100
-        tableView.register(SearchTableViewCell.self, forCellReuseIdentifier: SearchTableViewCell.identifier)
-        tableView.snp.makeConstraints { make in
-            make.edges.equalTo(view.safeAreaLayoutGuide)
-        }
         collectionView.snp.makeConstraints { make in
             make.top.horizontalEdges.equalTo(view.safeAreaLayoutGuide)
-            make.height.equalTo(50)
+            make.height.equalTo(44)
         }
+        tableView.snp.makeConstraints { make in
+            make.top.equalTo(collectionView.snp.bottom)
+            make.horizontalEdges.bottom.equalTo(view.safeAreaLayoutGuide)
+        }
+    }
+    
+    override func configureView() {
+        tableView.rowHeight = 100
+        collectionView.register(KeywordsCollectionViewCell.self, forCellWithReuseIdentifier: KeywordsCollectionViewCell.id)
+        tableView.register(SearchTableViewCell.self, forCellReuseIdentifier: SearchTableViewCell.identifier)
     }
     
     func layout() -> UICollectionViewLayout {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 100, height: 50)
+        layout.itemSize = CGSize(width: 80, height: 44)
         layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 10
         return layout
     }
 }

@@ -11,6 +11,7 @@ import RxCocoa
 
 final class SearchViewModel {
     let disposeBag = DisposeBag()
+    var searchTerms:[String] = UserDefaultsManager.searchTerms
     
     struct Input {
         let searchText:ControlProperty<String>
@@ -21,14 +22,20 @@ final class SearchViewModel {
     struct Output {
         let searchList:Observable<[SearchResults]>
         let modelSeleted: ControlEvent<SearchResults>
+        let keywords:Observable<[String]>
     }
     
     func transform(input: Input) -> Output {
         let searchList = PublishSubject<[SearchResults]>()
-        input.searchButtonTap
+        let keywords = BehaviorSubject(value: searchTerms)
+        
+        let searchTerm = input.searchButtonTap
             .debounce(.seconds(1), scheduler: MainScheduler.instance)
             .withLatestFrom(input.searchText)
             .distinctUntilChanged()
+            .share()
+        
+        searchTerm
             .flatMap{ value in
                 NetworkManager.shared.callRequest(query: value)
             }
@@ -42,8 +49,15 @@ final class SearchViewModel {
                 print("onDisposed")
             })
             .disposed(by: disposeBag)
-
         
-        return Output(searchList: searchList, modelSeleted: input.modelSeleted)
+        searchTerm
+            .subscribe(with: self) { owner, value in
+                owner.searchTerms.append(value)
+                UserDefaultsManager.searchTerms = owner.searchTerms
+                keywords.onNext(owner.searchTerms)
+            }
+            .disposed(by: disposeBag)
+        
+        return Output(searchList: searchList, modelSeleted: input.modelSeleted, keywords: keywords)
     }
 }

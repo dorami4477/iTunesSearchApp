@@ -22,6 +22,8 @@
 		489BCFCD2C64C9DF0091D3F7 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489BCFCC2C64C9DF0091D3F7 /* SearchTableViewCell.swift */; };
 		489BCFD42C6508670091D3F7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 489BCFD32C6508670091D3F7 /* Kingfisher */; };
 		489BCFD62C650D330091D3F7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489BCFD52C650D330091D3F7 /* DetailViewController.swift */; };
+		489BCFD82C65B1810091D3F7 /* KeywordsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489BCFD72C65B1810091D3F7 /* KeywordsCollectionViewCell.swift */; };
+		489BCFDC2C65CAC40091D3F7 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489BCFDB2C65CAC40091D3F7 /* UserDefaultManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		489BCFCA2C64BFD60091D3F7 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		489BCFCC2C64C9DF0091D3F7 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		489BCFD52C650D330091D3F7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		489BCFD72C65B1810091D3F7 /* KeywordsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordsCollectionViewCell.swift; sourceTree = "<group>"; };
+		489BCFDB2C65CAC40091D3F7 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 				489BCFAE2C64B49C0091D3F7 /* Assets.xcassets */,
 				489BCFB02C64B49C0091D3F7 /* LaunchScreen.storyboard */,
 				489BCFB32C64B49C0091D3F7 /* Info.plist */,
+				489BCFDB2C65CAC40091D3F7 /* UserDefaultManager.swift */,
 			);
 			path = iTunesSearchApp;
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 				489BCFCA2C64BFD60091D3F7 /* Search.swift */,
 				489BCFCC2C64C9DF0091D3F7 /* SearchTableViewCell.swift */,
 				489BCFD52C650D330091D3F7 /* DetailViewController.swift */,
+				489BCFD72C65B1810091D3F7 /* KeywordsCollectionViewCell.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -197,10 +203,12 @@
 			files = (
 				489BCFD62C650D330091D3F7 /* DetailViewController.swift in Sources */,
 				489BCFC42C64BD6B0091D3F7 /* NetworkManager.swift in Sources */,
+				489BCFD82C65B1810091D3F7 /* KeywordsCollectionViewCell.swift in Sources */,
 				489BCFAA2C64B49A0091D3F7 /* SearchViewController.swift in Sources */,
 				489BCFC22C64BD540091D3F7 /* SearchViewModel.swift in Sources */,
 				489BCFBD2C64BB280091D3F7 /* BaseViewController.swift in Sources */,
 				489BCFA62C64B49A0091D3F7 /* AppDelegate.swift in Sources */,
+				489BCFDC2C65CAC40091D3F7 /* UserDefaultManager.swift in Sources */,
 				489BCFCD2C64C9DF0091D3F7 /* SearchTableViewCell.swift in Sources */,
 				489BCFA82C64B49A0091D3F7 /* SceneDelegate.swift in Sources */,
 				489BCFCB2C64BFD60091D3F7 /* Search.swift in Sources */,

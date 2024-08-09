@@ -48,7 +48,7 @@ final class NetworkManager {
             }.resume()
             
             return Disposables.create()
-        }.debug("디버그")
+        }
         return result
     }
 }
