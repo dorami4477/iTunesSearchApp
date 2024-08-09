@@ -14,6 +14,7 @@ class SearchTableViewCell: UITableViewCell {
     let appNameLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 18, weight: .bold)
+        label.numberOfLines = 0
         label.textColor = .black
         return label
     }()

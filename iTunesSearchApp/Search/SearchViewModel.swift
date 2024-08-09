@@ -15,10 +15,12 @@ final class SearchViewModel {
     struct Input {
         let searchText:ControlProperty<String>
         let searchButtonTap: ControlEvent<Void>
+        let modelSeleted: ControlEvent<SearchResults>
     }
     
     struct Output {
         let searchList:Observable<[SearchResults]>
+        let modelSeleted: ControlEvent<SearchResults>
     }
     
     func transform(input: Input) -> Output {
@@ -40,7 +42,8 @@ final class SearchViewModel {
                 print("onDisposed")
             })
             .disposed(by: disposeBag)
+
         
-        return Output(searchList: searchList)
+        return Output(searchList: searchList, modelSeleted: input.modelSeleted)
     }
 }

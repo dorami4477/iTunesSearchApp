@@ -14,6 +14,7 @@ struct Search: Decodable {
 
 struct SearchResults: Decodable {
     let collectionId: Int?
+    let artistName: String?
     let collectionName: String?
     let artworkUrl100: String?
     let shortDescription: String?

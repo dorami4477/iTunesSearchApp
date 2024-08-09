@@ -13,6 +13,7 @@ import Kingfisher
 
 class SearchViewController: BaseViewController {
 
+    private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
     private let tableView = UITableView()
     let viewModel = SearchViewModel()
     let disposeBag = DisposeBag()
@@ -26,7 +27,8 @@ class SearchViewController: BaseViewController {
     func bind() {
         guard let searchbar = navigationItem.searchController?.searchBar else { return }
         let input = SearchViewModel.Input(searchText: searchbar.rx.text.orEmpty,
-                                          searchButtonTap: searchbar.rx.searchButtonClicked)
+                                          searchButtonTap: searchbar.rx.searchButtonClicked, 
+                                          modelSeleted: tableView.rx.modelSelected(SearchResults.self))
         let output = viewModel.transform(input: input)
         
         output.searchList
@@ -36,6 +38,15 @@ class SearchViewController: BaseViewController {
                 cell.appIconImageView.kf.setImage(with: url)
             }
             .disposed(by: disposeBag)
+        
+        output.modelSeleted
+            .bind(with: self) { owner, value in
+                let detailVC = DetailViewController()
+                detailVC.data = value
+                owner.navigationController?.pushViewController(detailVC, animated: true)
+            }
+            .disposed(by: disposeBag)
+        
     }
 
     override func configureNavigation() {
@@ -50,6 +61,7 @@ class SearchViewController: BaseViewController {
     
     override func configureHierarchy() {
         view.addSubview(tableView)
+        view.addSubview(collectionView)
     }
     
     override func configureLayout() {
@@ -58,6 +70,17 @@ class SearchViewController: BaseViewController {
         tableView.snp.makeConstraints { make in
             make.edges.equalTo(view.safeAreaLayoutGuide)
         }
+        collectionView.snp.makeConstraints { make in
+            make.top.horizontalEdges.equalTo(view.safeAreaLayoutGuide)
+            make.height.equalTo(50)
+        }
+    }
+    
+    func layout() -> UICollectionViewLayout {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 100, height: 50)
+        layout.scrollDirection = .horizontal
+        return layout
     }
 }
 
