@@ -8,6 +8,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import Alamofire
 
 enum NetworkError: Error {
     case invaildURL
@@ -18,6 +19,22 @@ enum NetworkError: Error {
 final class NetworkManager {
     static let shared = NetworkManager()
     private init() {}
+    
+    func fetchDataWithAlamofire(query:String) -> Single<Search> {
+        let result = Single<Search>.create { observer in
+            let url = "https://itunes.apple.com/search?term=\(query)"
+            AF.request(url).responseDecodable(of: Search.self) { response in
+                switch response.result{
+                case .success(let value):
+                    observer(.success(value))
+                case .failure(let error):
+                    observer(.failure(error))
+                }
+            }
+            return Disposables.create()
+        }.debug("네트워크")
+        return result
+    }
     
     func callRequest(query:String) -> Observable<Search>{
         let url = "https://itunes.apple.com/search?term=\(query)"

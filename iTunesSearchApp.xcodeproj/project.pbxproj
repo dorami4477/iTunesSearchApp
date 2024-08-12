@@ -24,6 +24,8 @@
 		489BCFD62C650D330091D3F7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489BCFD52C650D330091D3F7 /* DetailViewController.swift */; };
 		489BCFD82C65B1810091D3F7 /* KeywordsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489BCFD72C65B1810091D3F7 /* KeywordsCollectionViewCell.swift */; };
 		489BCFDC2C65CAC40091D3F7 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489BCFDB2C65CAC40091D3F7 /* UserDefaultManager.swift */; };
+		48CD15382C69D5E300A7708B /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CD15372C69D5E300A7708B /* BaseViewModel.swift */; };
+		48CD153B2C69D81C00A7708B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 48CD153A2C69D81C00A7708B /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,7 @@
 		489BCFD52C650D330091D3F7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		489BCFD72C65B1810091D3F7 /* KeywordsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordsCollectionViewCell.swift; sourceTree = "<group>"; };
 		489BCFDB2C65CAC40091D3F7 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		48CD15372C69D5E300A7708B /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48CD153B2C69D81C00A7708B /* Alamofire in Frameworks */,
 				489BCFD42C6508670091D3F7 /* Kingfisher in Frameworks */,
 				489BCFC92C64BEDF0091D3F7 /* RxSwift in Frameworks */,
 				489BCFC72C64BEDF0091D3F7 /* RxCocoa in Frameworks */,
@@ -116,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				489BCFBC2C64BB280091D3F7 /* BaseViewController.swift */,
+				48CD15372C69D5E300A7708B /* BaseViewModel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 				489BCFC62C64BEDF0091D3F7 /* RxCocoa */,
 				489BCFC82C64BEDF0091D3F7 /* RxSwift */,
 				489BCFD32C6508670091D3F7 /* Kingfisher */,
+				48CD153A2C69D81C00A7708B /* Alamofire */,
 			);
 			productName = iTunesSearchApp;
 			productReference = 489BCFA22C64B49A0091D3F7 /* iTunesSearchApp.app */;
@@ -174,6 +180,7 @@
 				489BCFBE2C64BC640091D3F7 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				489BCFC52C64BEDF0091D3F7 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				489BCFD22C6508670091D3F7 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				48CD15392C69D81C00A7708B /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 489BCFA32C64B49A0091D3F7 /* Products */;
 			projectDirPath = "";
@@ -206,6 +213,7 @@
 				489BCFD82C65B1810091D3F7 /* KeywordsCollectionViewCell.swift in Sources */,
 				489BCFAA2C64B49A0091D3F7 /* SearchViewController.swift in Sources */,
 				489BCFC22C64BD540091D3F7 /* SearchViewModel.swift in Sources */,
+				48CD15382C69D5E300A7708B /* BaseViewModel.swift in Sources */,
 				489BCFBD2C64BB280091D3F7 /* BaseViewController.swift in Sources */,
 				489BCFA62C64B49A0091D3F7 /* AppDelegate.swift in Sources */,
 				489BCFDC2C65CAC40091D3F7 /* UserDefaultManager.swift in Sources */,
@@ -462,6 +470,14 @@
 				minimumVersion = 7.12.0;
 			};
 		};
+		48CD15392C69D81C00A7708B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -484,6 +500,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 489BCFD22C6508670091D3F7 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		48CD153A2C69D81C00A7708B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48CD15392C69D81C00A7708B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

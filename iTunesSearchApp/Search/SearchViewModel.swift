@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-final class SearchViewModel {
+final class SearchViewModel: BaseViewModel {
     let disposeBag = DisposeBag()
     var searchTerms:[String] = UserDefaultsManager.searchTerms
     
@@ -36,7 +36,7 @@ final class SearchViewModel {
             .distinctUntilChanged()
             .share()
         
-        searchTerm
+        /*searchTerm
             .flatMap{ value in
                 NetworkManager.shared.callRequest(query: value)
             }
@@ -49,6 +49,22 @@ final class SearchViewModel {
             }, onDisposed: { owner in
                 print("onDisposed")
             })
+            .disposed(by: disposeBag)*/
+        
+        searchTerm
+            .flatMap{ value in
+                NetworkManager.shared.fetchDataWithAlamofire(query: value)
+            }
+            .catch { error in
+                let search = Search(resultCount: 0, results: [])
+                return Observable.just(search)
+            }
+            .asDriver(onErrorJustReturn: Search(resultCount: 0, results: []))
+            .drive { value in
+                searchList.onNext(value.results)
+            } onCompleted: {
+                print("completed")
+            }
             .disposed(by: disposeBag)
         
         searchTerm
